@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "05fc8487-dc28-4e8d-8e41-c37db8e986c2",
+		"name": "DoctorPatientApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45011453"
+	},
+	"item": [
+		{
+			"name": "AddingDoctor",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n  \"name\": \"Dr. Neeraj Sharma\",\r\n  \"city\": \"Noida\",\r\n  \"email\": \"neeraj.sharma@example.com\",\r\n  \"phoneNumber\": \"9876543214\",\r\n  \"speciality\": \"ORTHOPAEDIC\"\r\n}\r\n\r\n\r\n\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/doctors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"doctors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddingPatient",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Amit Rana\",\r\n  \"city\": \"Noida\",\r\n  \"email\": \"amit@example.com\",\r\n  \"phoneNumber\": \"9990000005\",\r\n  \"symptom\": \"BACK_PAIN\"\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/patients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"patients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SuggestionDoctor",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/suggestions/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"suggestions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
